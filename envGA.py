@@ -43,7 +43,7 @@ class envGA(gym.Env):
            eMBB  | BW_e_R1 | BW_e_R2 |       
                   --------- ---------
     [GA_Output]
-    Job (40x100x5) --> 요걸 낱개로 5장을 normalize 해서 붙일지 고민.. 나중에 normalize 이슈 있음
+    Job (40x100x5) --> 요걸 낱개로 5장을 normalize 해서 붙일지 고민. 나중에 normalize 이슈 있음
     GA_UE의 리턴값은 40x100x5 Job matrix,람다u,람다e, 
     '''
 
@@ -56,7 +56,7 @@ class envGA(gym.Env):
         구조  if문
         if 채널게인 bad, -> local  처리
         else, 채널게인 good -> 오프로딩 조합 찾기(GA이용)
-        즉 이 경우 GA는 채널게인이 나쁜 경우에만 사용될것이다.
+        즉 이 경우 GA는 채널게인이 나쁜 경우에만 사용.
 
         '''
         #best_RAT = int(best_RAT[node_index])
@@ -248,7 +248,7 @@ class envGA(gym.Env):
 
 ###################GA_eMBB_v1 요거는 나중에 벤치마킹핡때, GA의 방향성 (goodfit) 설정하고 안하고 벤치마크용으로 해놔야겠음.
     def GA_eMBB(self, node_index, lam_e, H_raw, BW ):
-        ##  불완전코드.; o0+o1+o2 = 1 을 확실하게 보장하는방법ㅇ ㅣ필요함.
+     
         H1  = H_raw[node_index,0]
         H2  = H_raw[node_index,1]
         BW1 = BW[1,0]
